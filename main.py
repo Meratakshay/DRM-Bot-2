@@ -103,12 +103,13 @@ if __name__ == "__main__":
     
     
     async def main():
+    try:
         await PRO.start()
         # h = await PRO.get_chat_member(chat_id= int(-1002115046888), user_id=6695586027)
         # print(h)
         bot_info = await PRO.get_me()
         LOGGER.info(f"<--- @{bot_info.username} Started --->")
-        except FloodWait as e:
+    except FloodWait as e:
         LOGGER.error(f"FloodWait: Sleeping {e.value}s")
         await asyncio.sleep(e.value + 10)
         
