@@ -102,7 +102,7 @@ if __name__ == "__main__":
         chat_id.append(j)
     
     
-    async def main():
+async def main():
     try:
         await PRO.start()
         # h = await PRO.get_chat_member(chat_id= int(-1002115046888), user_id=6695586027)
