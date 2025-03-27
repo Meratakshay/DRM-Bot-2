@@ -3,7 +3,6 @@ from pyrogram import Client as AFK, idle
 from pyrogram.enums import ChatMemberStatus, ChatMembersFilter
 from pyrogram import enums
 from pyrogram.types import ChatMember
-from pyrogram.errors import FloodWait
 import asyncio
 import logging
 import tgcrypto
@@ -109,9 +108,6 @@ async def main():
         # print(h)
         bot_info = await PRO.get_me()
         LOGGER.info(f"<--- @{bot_info.username} Started --->")
-    except FloodWait as e:
-        LOGGER.error(f"FloodWait: Sleeping {e.value}s")
-        await asyncio.sleep(e.value + 10)
         
         for i in chat_id:
             try:
