@@ -14,12 +14,12 @@ from tglogging import TelegramLogHandler
 # Config 
 class Config(object):
     BOT_TOKEN = os.environ.get("BOT_TOKEN", "")
-    API_ID = int(os.environ.get("API_ID",  "27743952"))
-    API_HASH = os.environ.get("API_HASH", "416ba062bd16c6cf1aa38dd389726023")
+    API_ID = int(os.environ.get("API_ID", "27743952"))
+    API_HASH = os.environ.get("API_HASH","416ba062bd16c6cf1aa38dd389726023")
     DOWNLOAD_LOCATION = "./DOWNLOADS"
     SESSIONS = "./SESSIONS"
 
-    AUTH_USERS = os.environ.get('AUTH_USERS', '7268596608').split(',')
+    AUTH_USERS = os.environ.get('AUTH_USERS','7268596608').split(',')
     for i in range(len(AUTH_USERS)):
         AUTH_USERS[i] = int(AUTH_USERS[i])
 
@@ -27,7 +27,7 @@ class Config(object):
     for i in range(len(GROUPS)):
         GROUPS[i] = int(GROUPS[i])
 
-    LOG_CH = os.environ.get("LOG_CH", "-1002552672033")
+    LOG_CH = os.environ.get("LOG_CH","-1002552672033")
 
 # TelegramLogHandler is a custom handler which is inherited from an existing handler. ie, StreamHandler.
 logging.basicConfig(
