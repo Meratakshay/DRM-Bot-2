@@ -52,6 +52,10 @@ async def Pro(bot: AFK, m: Message):
         return
 
     for i in range(num, len(nameLinks)):
+        caption_name = "Unnmed File"
+        if not nameLinks or len(nameLinks) == 0:
+        await m.reply_text("No links found.")
+        return
         try:
             name = BOT.parse_name(nameLinks[i][0])
             link = nameLinks[i][1]
