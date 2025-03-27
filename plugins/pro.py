@@ -53,7 +53,7 @@ async def Pro(bot: AFK, m: Message):
 
     for i in range(num, len(nameLinks)):
         caption_name = "Unnmed File"
-        if not nameLinks or len(nameLinks) == 0:
+    if not nameLinks or len(nameLinks) == 0:
         await m.reply_text("No links found.")
         return
         try:
