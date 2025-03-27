@@ -108,7 +108,7 @@ if __name__ == "__main__":
         # print(h)
         bot_info = await PRO.get_me()
         LOGGER.info(f"<--- @{bot_info.username} Started --->")
-    except FloodWait as e:
+        except FloodWait as e:
         LOGGER.error(f"FloodWait: Sleeping {e.value}s")
         await asyncio.sleep(e.value + 10)
         
