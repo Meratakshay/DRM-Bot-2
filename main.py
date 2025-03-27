@@ -118,4 +118,4 @@ async def main():
         await idle()
 
     asyncio.get_event_loop().run_until_complete(main())
-    LOGGER.info(f"<---Bot Stopped--->")
+        LOGGER.info(f"<---Bot Stopped--->")
